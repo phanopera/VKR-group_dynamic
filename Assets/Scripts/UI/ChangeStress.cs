@@ -324,7 +324,6 @@ public class ChangeStress : MonoBehaviour
             {
                 group = 0;
             }
-            Debug.Log(stress);
             SendStress(City.options[City.value].text, Sex.options[Sex.value].text, group, stress, uiManager);
             playerPresses = false;
             myButton.onClick.Invoke();
