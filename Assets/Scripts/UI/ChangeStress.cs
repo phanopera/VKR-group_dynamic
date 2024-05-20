@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ChangeStress : MonoBehaviour
 {
-    //»«Ã≈Õ≈Õ»≈ —“–≈——¿
+    //√à√á√å√Ö√ç√Ö√ç√à√Ö √ë√í√ê√Ö√ë√ë√Ä
 
     private UILogManager uiManager;
     public Dropdown City;
@@ -53,7 +53,7 @@ public class ChangeStress : MonoBehaviour
             needRandomStress.isOn = false;
             noStress = true;
         }
-
+        playerPresses=true;
 
     }
     void Update()
@@ -94,7 +94,7 @@ public class ChangeStress : MonoBehaviour
         }
     }
 
-    //œ≈–≈ƒ¿“‹ —“–≈——
+    //√è√Ö√ê√Ö√Ñ√Ä√í√ú √ë√í√ê√Ö√ë√ë
     public void ButtonStressCheck() {
 
         if (playerPresses) { 
@@ -102,7 +102,7 @@ public class ChangeStress : MonoBehaviour
             Stress.value = 0.5f;
         }
     }
-    //—Œ«ƒ¿Õ»≈ «ŒÕ€ —“–≈——¿
+    //√ë√é√á√Ñ√Ä√ç√à√Ö √á√é√ç√õ √ë√í√ê√Ö√ë√ë√Ä
     public void ButtonStressCreateZone()
     {
         SendStressIntoZone(City, Sex, Groups, StressSt, StressStTime, uiManager);
@@ -112,7 +112,7 @@ public class ChangeStress : MonoBehaviour
 
 
 
-    //œ≈–≈ƒ¿◊¿ —“–≈——¿ ◊≈–≈« UI
+    //√è√Ö√ê√Ö√Ñ√Ä√ó√Ä √ë√í√ê√Ö√ë√ë√Ä √ó√Ö√ê√Ö√á UI
     public static void SendStress(Dropdown city, Dropdown sex, Dropdown group, int stress, int stressTime, UILogManager uiManager)
     {
         StressCity = city.options[city.value].text;
@@ -160,7 +160,7 @@ public class ChangeStress : MonoBehaviour
         group.value = 0;
         ChangeGroupsList(group);
     }
-    //œ≈–≈ƒ¿◊¿ —“–≈——¿ ◊≈–≈« «ŒÕ”
+    //√è√Ö√ê√Ö√Ñ√Ä√ó√Ä √ë√í√ê√Ö√ë√ë√Ä √ó√Ö√ê√Ö√á √á√é√ç√ì
     public static void SendStressIntoZone(Dropdown city, Dropdown sex, Dropdown group, int stress, int stressTime, UILogManager uiManager)
     {
         GameObject zonePF = Instantiate(stressZoneGO, new Vector3(-30, 0, -30), Quaternion.identity);
@@ -212,7 +212,7 @@ public class ChangeStress : MonoBehaviour
         group.value = 0;
 
     }
-    //»«Ã≈Õ»“‹ —œ»—Œ  √–”œœ
+    //√à√á√å√Ö√ç√à√í√ú √ë√è√à√ë√é√ä √É√ê√ì√è√è
     public static void ChangeGroupsList(Dropdown group)
     {
         group.ClearOptions();
@@ -225,14 +225,14 @@ public class ChangeStress : MonoBehaviour
         group.AddOptions(groupIDs);
     }
 
-    // ŒÔÂ‰ÂÎÂÌËÂ ÍÎ‡ÒÒ‡ StressState
+    // √é√Ø√∞√•√§√•√´√•√≠√®√• √™√´√†√±√±√† StressState
     private class StressState
     {
         public int StressLevel;
         public string City;
         public string Sex;
     }
-    //---ƒÀﬂ “≈—“¿ 10 —“–≈——Œ¬€’ —»“”¿÷»…
+    //---√Ñ√ã√ü √í√Ö√ë√í√Ä 10 √ë√í√ê√Ö√ë√ë√é√Ç√õ√ï √ë√à√í√ì√Ä√ñ√à√â
     private List<StressState> stressStates = new List<StressState>
     {
         new StressState { StressLevel = 1, City = "FirsTown", Sex = "None" },
@@ -304,7 +304,7 @@ public class ChangeStress : MonoBehaviour
     }
     //---
 
-    //~~~—À”◊¿…Õ€… —“–≈——
+    //~~~√ë√ã√ì√ó√Ä√â√ç√õ√â √ë√í√ê√Ö√ë√ë
     private IEnumerator RandomStress()
     {
         while (needRandomStress.isOn)
